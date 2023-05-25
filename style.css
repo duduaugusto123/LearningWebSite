@@ -7,6 +7,17 @@
  --font_title_color:#9340ff;
 }
 
+@font-face {
+    font-family: 'Codec Pro Extra Bold';
+    src: url('Codec Pro ExtraBold.ttf') format('ttf');         
+    
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Codec Pro Extra Bold', sans-serif;
+  }
+
 .conteiner{
     position: fixed ;
     display: flex;
@@ -35,8 +46,8 @@
     height: 180px;  
 }
 .inicio .top_side img{
-    width: 58px;
-    height: 58px;
+    width: 80px;
+    height: 80px;
 }
 .Menu_bar{
     display: inline-flex;
@@ -45,21 +56,80 @@
     top: 20px;
     align-items: center;
     background-color: transparent ;
-    height: 60px;
+    height: 80px;
     border-radius: 25px;
     justify-content: space-between;    
-    border: 1.5px var(--vermelho) solid;
-    width: 25%;
+    border: 2px var(--vermelho) solid;
+    width: 60%;
+        
     
-    
+}
+#logo_dev_learning_top{
+    margin-left: 50px;
+    margin-top: 18px;
+}
+#Title{
+    margin-right: 10%;
+    margin-top: 38px;
+    margin-left: 6px;
+    font-size: 35px;
 }
 .Menu_bar li{
-    margin-left: 20px;
-    font-size: 30px;
+    
+    font-size: 370%;   
+    transition: all 0.5s ease-in-out; 
        
 }
-
-.Menu_bar li i{
-
+.Menu_bar li:hover{
+    transform: translateY(-2px);
 }
+.Menu_bar li box-icon{
+width: 130%;
+margin-top: 10px;
+height: auto;
+margin-left: 30px;
+}
+#pc_img{
+    height: auto;
+    width: 600px;
+    position: relative;
+    left: 900px;
+    top: -280px;
+    border-radius: 25px;
+    
+}
+.image_pc_div {
+    width: 700px;
+    height: 400px;
+    background-image: radial-gradient(circle, var(--azulEscBrilho));
+  }
 
+  .button_see_more{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 80px;
+    position: relative;
+    top: -180px;
+    margin-left: 100px;
+    font-size: 22px;
+    color: #101728;    
+    border-radius: 50px;
+    background-color: #0011ef;
+    background-image: linear-gradient(to right,#0011ef,#FF3C5F);    
+  }
+  .button_see_more a p{
+    font-weight: 795;
+    
+  }
+.Menu_bar #mysql i{    
+    margin-right: 40px;
+}
+.bot_side{
+    margin-left: 50px;
+}
+.bot_side #become_a_dev{
+    font-size: 45px;
+    margin-top: 200px;
+}
