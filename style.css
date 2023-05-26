@@ -7,33 +7,28 @@
  --font_title_color:#9340ff;
 }
 
-@font-face {
-    font-family: 'Codec Pro Extra Bold';
-    src: url('Codec Pro ExtraBold.ttf') format('ttf');         
-    
-    font-style: normal;
-  }
 
   body {
-    font-family: 'Codec Pro Extra Bold', sans-serif;
-  }
-
+    font-family: 'Poppins', sans-serif;  
+}
+  
 .conteiner{
-    position: fixed ;
+    position: static;
     display: flex;
     flex-direction: column;
     top: 0px;
     left: 0px;
     justify-content: center;
-    align-items: center;    
-    overflow: scroll;
+    align-items: center; 
     width: 100vw;
+    overflow: scroll;    
     height: auto;
     background-color: var(--background-color);
     color: var(--font_color);
 }
 
 *{
+    
     margin: 0;
     padding: 0;
     border: 0;
@@ -52,7 +47,7 @@
 .Menu_bar{
     display: inline-flex;
     list-style: none;
-    position: relative;
+    position: sticky;
     top: 20px;
     align-items: center;
     background-color: transparent ;
@@ -82,6 +77,7 @@
 }
 .Menu_bar li:hover{
     transform: translateY(-2px);
+    border: #792531 1px solid;
 }
 .Menu_bar li box-icon{
 width: 130%;
@@ -93,15 +89,23 @@ margin-left: 30px;
     height: auto;
     width: 600px;
     position: relative;
-    left: 900px;
-    top: -280px;
-    border-radius: 25px;
-    
+    left: 50px;
+    top: -10px;    
+    border-radius: 25px;   
+    border: 2px solid #1c31a8;
+    box-shadow: 0px 0px 150px 30px var(--azulEsc-Brilho);
 }
+
 .image_pc_div {
-    width: 700px;
-    height: 400px;
-    background-image: radial-gradient(circle, var(--azulEscBrilho));
+    width: 1000px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 700px;
+    top: -380px;
+    
   }
 
   .button_see_more{    
@@ -111,7 +115,7 @@ margin-left: 30px;
     width: 250px;
     height: 80px;
     position: relative;
-    top: -180px;
+    top: -650px;
     margin-left: 100px;
     font-size: 22px;
     color: #101728;    
@@ -120,7 +124,7 @@ margin-left: 30px;
     background-image: linear-gradient(to right,#0011ef,#FF3C5F);    
   }
   .button_see_more a p{
-    font-weight: 795;
+    font-weight: 900;
     
   }
 .Menu_bar #mysql i{    
@@ -132,4 +136,137 @@ margin-left: 30px;
 .bot_side #become_a_dev{
     font-size: 45px;
     margin-top: 200px;
+}
+
+.div_2{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -200px;
+}
+.div_2 h2{
+    font-size: 60px;
+    width: 55%;
+    text-align: center;
+    font-weight: 900;
+}
+.div_2 h3{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 55%;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+
+.div_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -270px;
+    
+}
+
+.div_3 h2{
+    
+    font-size: 55px;
+    width: 70%;
+    text-align: left;
+    font-weight: 980;
+}
+.div_3 h3{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 70%;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    
+}
+.div_3 h3:nth-last-child(3){
+    margin-top: 45px;
+}
+
+.div_3 header{
+    
+    font-size: 20px;
+    width: 70%;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 300px;
+}
+.div_3 #js_html_css{
+    height: 400px;
+    width: auto;
+    position: relative;
+    left: -275px;
+    top: 0px;
+    
+}
+
+.div_3 .limite_img_js{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    left: 300px;
+    top: 500px;
+}
+
+.div_4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -220px;
+    left: 100px;
+}
+
+.div_4 #man_in_pc{
+    width: auto;
+    height: 350px;
+    position: relative;
+    left: -228px;
+    
+    
+}
+
+.div_4 .limit_dev_programer_img{
+    width: 470px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    left: -420px;
+}
+.div_4 h2{
+    font-size: 55px;
+    width: 100%;
+    text-align: left;
+    font-weight: 980;
+    position: relative;
+    left: 850px;
+    top: -400px;
+    margin-bottom: 15px;
+}
+.div_4 h3{
+    margin-top: 10px;
+    font-size: 20px;
+    width: 70%;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: relative;
+    left: 580px;
+    top: -370px;
 }
