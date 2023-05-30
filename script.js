@@ -12,3 +12,18 @@ window.addEventListener('scroll', function() {
     }
   });
 
+window.onload = function(){
+  var li = document.querySelectorAll(".Menu_bar li");
+  var card = document.querySelector(".flip-card-inner");
+  for (var i = 0; i < li.length; i++) {
+    var li = li[i];
+    li.addEventListener("mouseover", function() {
+      card.classList.add("vira");
+    });
+  
+    li.addEventListener("mouseout", function() {
+      card.classList.remove("vira");
+    });
+  }
+}
+

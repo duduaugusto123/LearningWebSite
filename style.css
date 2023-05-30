@@ -7,11 +7,57 @@
  --font_title_color:#9340ff;
 }
 
+@-webkit-keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+  }
+  @keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+  }
 
-  body {
+  @-webkit-keyframes reverse-flip-vertical-left {
+    0% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+  }
+  @keyframes reverse-flip-vertical-left {
+    0% {
+      
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+  }
+  
+
+
+body{
     font-family: 'Poppins', sans-serif;  
 }
-  
+ 
+
 .conteiner{
     position: static;
     display: flex;
@@ -77,8 +123,49 @@
 }
 .Menu_bar li:hover{
     transform: translateY(-2px);
-    border: #792531 1px solid;
+    color: var(--font_color);
 }
+.flip-card {
+      background-color: transparent;
+      width: 200px;
+      height: 200px;
+      perspective: 1000px; /* Define a perspectiva do flip card */
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s; /* Define a transição ao girar o flip card */
+      transform-style: preserve-3d;
+    }
+
+   .flip-card-inner.vira{
+    -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+.flip-card-inner{
+    -webkit-animation: reverse-flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: reverse-flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+
+}
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    
+
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      width: 600px;
+      transform: rotateY(180deg); /* Inicialmente oculta a parte de trás */
+    }
+  
 .Menu_bar li box-icon{
 width: 130%;
 margin-top: 10px;
@@ -104,7 +191,7 @@ margin-left: 30px;
     justify-content: center;
     position: relative;
     left: 700px;
-    top: -380px;
+    top: -500px;
     
   }
 
@@ -269,4 +356,106 @@ margin-left: 30px;
     position: relative;
     left: 580px;
     top: -370px;
+
+}
+
+.div_5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -220px;
+    left: 100px;
+}
+
+.div_5 h2{    
+    font-size: 60px;
+    width: 70%;
+    text-align: left;
+    font-weight: 980;
+    position: relative;    
+    margin-bottom: 15px;
+}
+.div_5 h3{
+    margin-top: 10px;
+    font-size: 25px;
+    width: 70%;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: relative;
+    
+
+}
+.div_5 #reunion_img{
+    width: auto;
+    height: 350px;
+    position: relative;
+    left: 228px;
+    top: -380px;
+    border-radius:25px ;
+    
+}
+.div_6{
+    display: flex;
+    transition: all 1s ease-in-out;
+
+}
+.div_6 .left_side{
+    display: flex;
+    position: relative;
+    left: -300px;
+}
+.div_6 .right_side{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 400px;
+    top: -100px;
+}
+.div_6 .list_icon, .div_6 i{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+   font-size: 25px;
+   transition: all 0.5s ease-in-out;
+
+}
+.list_icon{
+    position: relative;
+    left: -100px;
+}
+.div_6 .list_icon a{
+    color: var(--font_color);
+}
+.div_6 i:hover{
+    transform: translateY(-5px);
+    color: var(--vermelho);
+}
+.div_6 h3 a{
+    color: var(--font_color);
+}
+
+.div_6  h3{
+    margin-top: 5px;
+}
+.div_6  h2{
+    margin-bottom: 15px;
+}
+.div_6 #logo_dev{
+    margin-left: 50px;
+    margin-top: 18px;
+    width: 80px;
+    height: 80px;    
+}
+.div_6 #Title_down{
+    margin-right: 10%;
+    margin-top: 38px;
+    margin-left: 6px;
+    font-size: 35px;
+}
+*{
+    text-decoration: none;
 }
