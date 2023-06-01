@@ -6,7 +6,67 @@
  --azulEsc-Brilho:#1f41bd;
  --font_title_color:#9340ff;
 }
-
+@-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+@-webkit-keyframes color-change-5x {
+    0% {
+      background: #19dcea;
+    }
+    25% {
+      background: #b22cff;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+      background: #f5be10;
+    }
+    100% {
+      background: #3bd80d;
+    }
+  }
+  @keyframes color-change-5x {
+    0% {
+      background: #19dcea;
+    }
+    25% {
+      background: #b22cff;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+      background: #f5be10;
+    }
+    100% {
+      background: #3bd80d;
+    }
+  }
+  
 @-webkit-keyframes flip-vertical-left {
     0% {
       -webkit-transform: rotateY(0);
@@ -50,8 +110,31 @@
         transform: rotateY(0);
     }
   }
-  
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
 
+  .scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 body{
     font-family: 'Poppins', sans-serif;  
@@ -79,8 +162,12 @@ body{
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    
 }
-
+.inicio,.div_2,.div_3,.div_4,.div_5,.div_6{
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .inicio .top_side{
     display: flex;  
     width: 100vw;
@@ -114,22 +201,29 @@ body{
     margin-top: 38px;
     margin-left: 6px;
     font-size: 35px;
+    
 }
 .Menu_bar li{
     
     font-size: 370%;   
     transition: all 0.5s ease-in-out; 
+    scale: 0.5;
        
 }
 .Menu_bar li:hover{
     transform: translateY(-2px);
     color: var(--font_color);
+    border: 1px #a63446 solid;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
 }
 .flip-card {
       background-color: transparent;
-      width: 200px;
-      height: 200px;
+      width: 600px;
+      height: 465px;
       perspective: 1000px; /* Define a perspectiva do flip card */
+      
     }
 
     .flip-card-inner {
@@ -160,10 +254,17 @@ body{
     
 
     .flip-card-back {
-      background-color: dodgerblue;
+      background-color: rgb(255, 255, 255);
       color: white;
       width: 600px;
-      transform: rotateY(180deg); /* Inicialmente oculta a parte de trás */
+      transform: rotateY(180deg); 
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6.9px);
+      -webkit-backdrop-filter: blur(6.9px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
   
 .Menu_bar li box-icon{
@@ -176,11 +277,10 @@ margin-left: 30px;
     height: auto;
     width: 600px;
     position: relative;
-    left: 50px;
-    top: -10px;    
+    left: 0px;
+    top: 0px;    
     border-radius: 25px;   
-    border: 2px solid #1c31a8;
-    box-shadow: 0px 0px 150px 30px var(--azulEsc-Brilho);
+    border: 1px solid #d1d5f06b;
 }
 
 .image_pc_div {
@@ -195,6 +295,68 @@ margin-left: 30px;
     
   }
 
+  .beautiful_circle{
+    display: flex;
+    position: relative;
+    top: -1000px;
+    left: 1500px;
+  }
+  .beautiful_circle span{
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: #101728;
+    margin: 0px;
+  }
+  .beautiful_circle span:nth-child(1){
+    z-index: 1;
+    position: relative;
+    
+  }
+  .beautiful_circle .gira{
+    z-index: 2;
+    position: relative;
+    background-color: #101728;
+    left: -580px;
+    top: 10px;
+    height: 580px;
+    overflow: hidden;
+  }
+  .beautiful_circle span:nth-child(3){
+    z-index: 3;
+    position: relative;
+    background-color: #101728;
+    left: -1175px;
+    top: 10px;
+    height: 580px;
+  }
+  .gira::before{
+    
+    width: 100px;
+    height: 600px;    
+    position: relative;    
+    top: -200px;
+    left: 300px;
+    content: "";
+    position: absolute;    
+    background: linear-gradient(0deg,transparent,transparent,#FF3C5F,#FF3C5F,#FF3C5F) ;    
+    z-index: 2;      
+    transform-origin:bottom right;
+    border-radius: 8px;
+    animation: animate 3s linear infinite;
+  }
+  @keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+  
+
   .button_see_more{    
     display: flex;
     justify-content: center;
@@ -202,17 +364,23 @@ margin-left: 30px;
     width: 250px;
     height: 80px;
     position: relative;
-    top: -650px;
+    top: -1250px;
     margin-left: 100px;
     font-size: 22px;
     color: #101728;    
     border-radius: 50px;
     background-color: #0011ef;
     background-image: linear-gradient(to right,#0011ef,#FF3C5F);    
+    transition: all 1s ease-in-out;
   }
   .button_see_more a p{
     font-weight: 900;
     
+  }
+
+  .button_see_more:hover{
+    -webkit-animation: color-change-5x 8s linear infinite alternate both;
+	        animation: color-change-5x 8s linear infinite alternate both;
   }
 .Menu_bar #mysql i{    
     margin-right: 40px;
@@ -232,7 +400,7 @@ margin-left: 30px;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -200px;
+    top: -800px;
 }
 .div_2 h2{
     font-size: 60px;
@@ -257,7 +425,7 @@ margin-left: 30px;
     align-items: center;
     width: 100%;
     position: relative;
-    top: -270px;
+    top: -700px;
     
 }
 
@@ -315,7 +483,7 @@ margin-left: 30px;
     align-items: center;
     width: 100%;
     position: relative;
-    top: -220px;
+    top: -520px;
     left: 100px;
 }
 
@@ -366,7 +534,7 @@ margin-left: 30px;
     align-items: center;
     width: 100%;
     position: relative;
-    top: -220px;
+    top: -520px;
     left: 100px;
 }
 
@@ -401,6 +569,8 @@ margin-left: 30px;
 .div_6{
     display: flex;
     transition: all 1s ease-in-out;
+    position: relative;
+    top: -520px;
 
 }
 .div_6 .left_side{
