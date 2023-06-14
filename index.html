@@ -15,24 +15,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 </head>
 <body>
-    <div class="conteiner">
+    <div class="conteiner">       
         <div class="inicio">
             <div class="top_side">
                 <img src="LogoDevLearning.png" alt="Dev Learning" id="logo_dev_learning_top">
                 <h3 id="Title" from="logo_dev_learning_top">Dev Learning</h3>
+                
                 <header class="Menu_bar">
-                    <li id="home"><box-icon name='home-alt-2' color="#a63446"></box-icon></li>
-                    <li id="python"><i class="fa-brands fa-python" style="color: #a63446;"></i></li>
-                    <li id="js"><i class="fa-brands fa-square-js" style="color: #a63446;"></i></li>
-                    <li id="css"><i class="fa-brands fa-css3-alt" style="color: #a63446;"></i></li>
-                    <li id="html"><i class="fa-brands fa-html5" style="color: #a63446;"></i></li>
-                    <li id="mysql"><i class="fas fa-database" style="color: #a63446;"></i></li>
+                    <li id="home">
+                        <lord-icon
+                        src="https://cdn.lordicon.com/osuxyevn.json"
+                        trigger="hover"
+                        colors="primary:#a63446"
+                        state="hover-3"
+                        style="width:90px;height:90px">
+                    </lord-icon></li>
+                    <li id="chat">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/hpivxauj.json"
+                            trigger="hover"
+                            colors="primary:#a63446"
+                            style="width:90px;height:90px">
+                        </lord-icon>                   
+                    </li>
+                    <li id="historico">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/weoiqraa.json"
+                            trigger="hover"
+                            colors="primary:#a63446"
+                            style="width:90px;height:90px">
+                        </lord-icon>
+                    </li>
+                    <li id="materia">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/kipaqhoz.json"
+                            trigger="morph"
+                            colors="primary:#a63446"
+                            style="width:90px;height:90px">
+                        </lord-icon>
+                    </li>
+                    <li id="busca">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xfftupfv.json"
+                            trigger="hover"
+                            colors="primary:#a63446"
+                            style="width:90px;height:90px">
+                        </lord-icon>
+                    </li>
+                    <li onclick="" id="avatar">
+                        <lord-icon
+                        src="https://cdn.lordicon.com/bhfjfgqz.json"
+                        trigger="hover"
+                        colors="primary:#a63446"
+                        style="width:90px;height:90px">
+                    </lord-icon></li>
                 </header>
             </div>
             <div class="bot_side">
-                
+                <div class="busca">
+                    <input type="text" id="Buscar" placeholder="Digite Aqui!">
+                </div>
                 <h2 id="become_a_dev">&lt;a href="devlearning.com"&gt;<br>Become a Dev!<br>&lt;/a&gt;</h2>
                 <div class="image_pc_div">
 

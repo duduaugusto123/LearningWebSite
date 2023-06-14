@@ -27,3 +27,16 @@ window.onload = function(){
   }
 }
 
+var avatar = document.querySelector("#avatar");
+avatar.addEventListener("click", function(){
+  
+
+})
+
+buscando = function(){
+  var busca = document.querySelector("#busca input");
+  busca.classList.toggle("buscando");
+
+
+};
+
